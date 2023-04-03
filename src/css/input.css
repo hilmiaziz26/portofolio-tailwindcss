@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hambuger-line {
+    @apply w-[30px] h-[3px] my-2 block bg-white;
+}
+
+/* class ini akan masuk ke button ketika diklik/toggle dari javascript */
+.hamburger-active > span:nth-child(1){
+    @apply rotate-45 translate-x-[1.8px] translate-y-[1px];
+}
+.hamburger-active > span:nth-child(3){
+    @apply -rotate-45 -translate-x-[0.5px];
+}
+.hamburger-active > span:nth-child(2){
+    @apply scale-0;
+}
+
+/* navbar fix ketika scroll pake javascript juga*/
+.navbar-fix{
+    @apply fixed z-50 bg-opacity-40 shadow-lg;
+    backdrop-filter: blur(8px);
+}
+
+/* logo berubah warna */
+.logo_color{
+    @apply text-indigo-700 transition duration-300 ease-in-out;
+}
+
+/* nav menu */
+.nav-menu-muncul{
+    @apply inline-block
+}
